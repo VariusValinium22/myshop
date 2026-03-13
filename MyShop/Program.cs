@@ -1,4 +1,3 @@
-using Microsoft.EntityFrameworkCore;
 using MyShop.MyHelpers;
 
 var builder = WebApplication.CreateBuilder(args);
