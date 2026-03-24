@@ -2,7 +2,7 @@ using MyShop.MyHelpers;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Register DBContext
+// For when I was using EF Core, moved to ADO.NET: Register DBContext
 //builder.Services.AddDbContext<ApplicationDbContext>(options =>
 //{
 //    string connectionString = builder.Configuration.GetConnectionString("DefaultConnection")!;

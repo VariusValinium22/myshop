@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  myshop-app:
+    build: .
+    container_name: myshop-app
+    ports:
+      - "8080:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ConnectionStrings__DefaultConnection: "Server=sqlserver,1433;Database=MyShop_Prod;User Id=sa;Password=Programmer22!;Encrypt=False;TrustServerCertificate=True"
+    networks:
+      - myshop-network
+    restart: unless-stopped
+
+networks:
+  myshop-network:
+    external: true
