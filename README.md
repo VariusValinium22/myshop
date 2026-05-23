@@ -3,6 +3,10 @@
 An ASP.NET Core Razor Pages web application for managing books, users, orders, and messages.  
 Built using C# and running on .NET 6.
 
+myshop.martinyoungproject.com (HomeLab Prod environment)
+
+https://martinbookshop.azurewebsites.net/ (Azure Prod environment)
+
 ## Tech Stack
 
 - **Framework:** ASP.NET Core
@@ -33,12 +37,12 @@ Built using C# and running on .NET 6.
 
 ## Running Locally
 
-1. Open the solution in **Visual Studio 2022**
+1. Open the solution in **Visual Studio 2022** or your chosen ITE
 2. Ensure a SQL Server instance is available
 3. Update connection strings in `appsettings.json`
 
 ## Notes
--Enable/Disable the SQL Server Database:
+-Enable/Disable the SQL Server Database if using FREE Azure environment, otherwise, the HomeLab environment works as is:
 
 In order to get the website to show the book items, you need to:
 - go to the AppSettings.json file in Visual Studio.
