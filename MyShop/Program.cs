@@ -37,4 +37,23 @@ app.UseSession();
 
 app.MapRazorPages();
 
+if (app.Environment.IsDevelopment() && !System.Diagnostics.Debugger.IsAttached)
+{
+    app.Lifetime.ApplicationStarted.Register(() =>
+    {
+        var url = app.Urls.FirstOrDefault(u => u.StartsWith("http://", StringComparison.OrdinalIgnoreCase))
+            ?? app.Urls.FirstOrDefault()
+            ?? "http://localhost:5186";
+
+        try
+        {
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(url) { UseShellExecute = true });
+        }
+        catch
+        {
+            // Browser launch is best-effort for local dotnet run.
+        }
+    });
+}
+
 app.Run();

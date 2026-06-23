@@ -1,4 +1,9 @@
-﻿# MyShop (Martin’s Books)
+﻿#### How to run this project locally: 
+Use PowerShell(NOT GitBash) from ~/source/repos/myshop/
+   -  cd MyShop
+   -  dotnet run
+
+# MyShop (Martin’s Books)
 
 An ASP.NET Core Razor Pages web application for managing books, users, orders, and messages.  
 Built using C# and running on .NET 6.

@@ -34,8 +34,3 @@ namespace MyShop.MyHelpers
         }
     }
 }
-
-
-
-
-
